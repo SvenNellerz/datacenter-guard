@@ -1,0 +1,281 @@
+{
+  "playbooks": [
+    {
+      "id": "breach-response",
+      "name": "Breach Detection & Response",
+      "icon": "\ud83d\udd34",
+      "severity": "critical",
+      "description": "Playbook for triaging suspected compromise, validating scope, containing affected systems, and driving eradication with evidence preservation.",
+      "steps": [
+        {
+          "title": "Detect",
+          "description": "Validate alert fidelity, identify impacted assets, and open an incident bridge."
+        },
+        {
+          "title": "Contain",
+          "description": "Isolate affected accounts, endpoints, or segments while minimizing business disruption."
+        },
+        {
+          "title": "Investigate",
+          "description": "Collect logs, endpoint telemetry, memory artifacts, and authentication trails."
+        },
+        {
+          "title": "Eradicate",
+          "description": "Remove persistence, patch exploited weaknesses, and rotate exposed credentials."
+        },
+        {
+          "title": "Recover",
+          "description": "Restore services with heightened monitoring and documented approvals."
+        }
+      ],
+      "contacts": [
+        {
+          "role": "CISO",
+          "contact": "ciso@company.com"
+        },
+        {
+          "role": "SOC Lead",
+          "contact": "soc@company.com"
+        },
+        {
+          "role": "Legal Counsel",
+          "contact": "legal@company.com"
+        }
+      ]
+    },
+    {
+      "id": "ransomware-response",
+      "name": "Ransomware Containment",
+      "icon": "\ud83d\udc80",
+      "severity": "critical",
+      "description": "Workflow for stopping encryption spread, protecting backups, coordinating executive response, and preparing restoration or negotiation decisions.",
+      "steps": [
+        {
+          "title": "Trigger Isolation",
+          "description": "Disconnect infected hosts and disable high-risk east-west paths immediately."
+        },
+        {
+          "title": "Protect Backups",
+          "description": "Verify backup integrity and enforce immutability controls."
+        },
+        {
+          "title": "Hunt Scope",
+          "description": "Identify patient zero, lateral movement, and privileged account misuse."
+        },
+        {
+          "title": "Executive Escalation",
+          "description": "Notify leadership, legal, insurance, and IR partners."
+        },
+        {
+          "title": "Restore Clean Systems",
+          "description": "Rebuild from trusted images and monitored data sources."
+        }
+      ],
+      "contacts": [
+        {
+          "role": "Incident Commander",
+          "contact": "ir-commander@company.com"
+        },
+        {
+          "role": "Backup Team",
+          "contact": "backup-ops@company.com"
+        }
+      ]
+    },
+    {
+      "id": "ddos-response",
+      "name": "DDoS Service Degradation Response",
+      "icon": "\ud83c\udf10",
+      "severity": "high",
+      "description": "Playbook for volumetric and application-layer denial-of-service events impacting internet-facing services.",
+      "steps": [
+        {
+          "title": "Confirm Attack Type",
+          "description": "Determine whether the event is volumetric, protocol, or application-layer."
+        },
+        {
+          "title": "Engage Providers",
+          "description": "Activate CDN, WAF, ISP, and DDoS mitigation contacts."
+        },
+        {
+          "title": "Apply Traffic Controls",
+          "description": "Rate-limit, geo-filter, or challenge suspicious requests as appropriate."
+        },
+        {
+          "title": "Monitor Business Impact",
+          "description": "Track availability, latency, and customer-facing symptoms."
+        },
+        {
+          "title": "Post-Event Review",
+          "description": "Tune protections and update thresholds after service stabilizes."
+        }
+      ],
+      "contacts": [
+        {
+          "role": "Network Operations",
+          "contact": "noc@company.com"
+        },
+        {
+          "role": "External ISP",
+          "contact": "isp-escalation@provider.com"
+        }
+      ]
+    },
+    {
+      "id": "data-exfiltration",
+      "name": "Data Exfiltration Investigation",
+      "icon": "\ud83d\udce4",
+      "severity": "critical",
+      "description": "Response flow for suspected unauthorized data movement involving staging systems, cloud storage, or outbound tunnels.",
+      "steps": [
+        {
+          "title": "Validate Alert",
+          "description": "Correlate data volume, destination, user context, and asset role."
+        },
+        {
+          "title": "Restrict Transfers",
+          "description": "Block suspicious outbound paths and quarantine involved accounts."
+        },
+        {
+          "title": "Quantify Exposure",
+          "description": "Identify datasets, records, and legal/regulatory implications."
+        },
+        {
+          "title": "Preserve Evidence",
+          "description": "Retain logs, proxy traces, DLP events, and endpoint artifacts."
+        },
+        {
+          "title": "Notify Stakeholders",
+          "description": "Coordinate privacy, legal, and customer communication requirements."
+        }
+      ],
+      "contacts": [
+        {
+          "role": "Privacy Officer",
+          "contact": "privacy@company.com"
+        },
+        {
+          "role": "Forensics Lead",
+          "contact": "forensics@company.com"
+        }
+      ]
+    },
+    {
+      "id": "insider-threat",
+      "name": "Insider Threat Response",
+      "icon": "\ud83d\udd75\ufe0f",
+      "severity": "high",
+      "description": "Procedure for suspicious employee or contractor behavior involving privilege abuse, policy violations, or malicious intent.",
+      "steps": [
+        {
+          "title": "Open Restricted Case",
+          "description": "Limit case visibility to authorized investigators and HR/legal partners."
+        },
+        {
+          "title": "Preserve Access Records",
+          "description": "Collect badge, VPN, PAM, and application activity logs."
+        },
+        {
+          "title": "Coordinate with HR",
+          "description": "Align investigative steps with employment policy and legal review."
+        },
+        {
+          "title": "Implement Targeted Controls",
+          "description": "Reduce privileges or increase monitoring without tipping off the subject prematurely."
+        },
+        {
+          "title": "Decide Remediation",
+          "description": "Execute account actions, evidence handoff, and communication plan."
+        }
+      ],
+      "contacts": [
+        {
+          "role": "HR Business Partner",
+          "contact": "hr@company.com"
+        },
+        {
+          "role": "Legal Counsel",
+          "contact": "legal@company.com"
+        }
+      ]
+    },
+    {
+      "id": "supply-chain-compromise",
+      "name": "Supply Chain Compromise",
+      "icon": "\ud83d\udce6",
+      "severity": "high",
+      "description": "Playbook for compromised vendors, software updates, managed services, or shared libraries impacting the environment.",
+      "steps": [
+        {
+          "title": "Identify Affected Dependencies",
+          "description": "Map impacted vendor products, packages, and connected systems."
+        },
+        {
+          "title": "Disable Risky Integrations",
+          "description": "Suspend trust relationships, tokens, or update channels as needed."
+        },
+        {
+          "title": "Scope Exposure",
+          "description": "Determine which workloads, accounts, and data were reachable."
+        },
+        {
+          "title": "Patch or Replace",
+          "description": "Apply vendor mitigations or swap components where necessary."
+        },
+        {
+          "title": "Strengthen Third-Party Controls",
+          "description": "Update supplier assessments, SBOM review, and approval workflows."
+        }
+      ],
+      "contacts": [
+        {
+          "role": "Vendor Management",
+          "contact": "vendors@company.com"
+        },
+        {
+          "role": "Procurement Security",
+          "contact": "procurement-security@company.com"
+        }
+      ]
+    },
+    {
+      "id": "evidence-collection",
+      "name": "Evidence Collection & Chain of Custody",
+      "icon": "\ud83e\uddfe",
+      "severity": "medium",
+      "description": "Standardized evidence handling process for incident investigations, legal hold, and forensic analysis support.",
+      "steps": [
+        {
+          "title": "Authorize Collection",
+          "description": "Confirm scope, approval, and handling requirements before acquisition."
+        },
+        {
+          "title": "Capture Volatile Data",
+          "description": "Preserve memory, active connections, and running processes when appropriate."
+        },
+        {
+          "title": "Acquire Non-Volatile Artifacts",
+          "description": "Collect disk, log, cloud audit, and configuration evidence with hashes."
+        },
+        {
+          "title": "Record Chain of Custody",
+          "description": "Track who handled each artifact, when, and for what purpose."
+        },
+        {
+          "title": "Secure Storage",
+          "description": "Store evidence in tamper-evident, access-controlled repositories."
+        }
+      ],
+      "contacts": [
+        {
+          "role": "Forensic Custodian",
+          "contact": "evidence@company.com"
+        },
+        {
+          "role": "Legal Hold Coordinator",
+          "contact": "legalhold@company.com"
+        }
+      ]
+    }
+  ]
+}

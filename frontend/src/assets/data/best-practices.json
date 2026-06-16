@@ -1,0 +1,84 @@
+{
+  "topics": [
+    {
+      "id": "dmz-design",
+      "name": "DMZ Design",
+      "practices": [
+        "Separate internet-facing services from internal applications.",
+        "Use reverse proxies or load balancers to terminate public traffic.",
+        "Restrict management access to DMZ assets through jump hosts.",
+        "Log all north-south flows and validate rule changes through change control."
+      ]
+    },
+    {
+      "id": "network-segmentation",
+      "name": "Network Segmentation",
+      "practices": [
+        "Group systems by trust, function, and sensitivity.",
+        "Default-deny east-west traffic and allow only required ports.",
+        "Use dedicated management, backup, and monitoring networks.",
+        "Review segmentation effectiveness with packet captures and tests."
+      ]
+    },
+    {
+      "id": "pam",
+      "name": "Privileged Access Management",
+      "practices": [
+        "Vault shared credentials and rotate them automatically.",
+        "Prefer just-in-time elevation over standing admin access.",
+        "Record privileged sessions for high-risk systems.",
+        "Review privileged roles and service accounts on a scheduled cadence."
+      ]
+    },
+    {
+      "id": "siem",
+      "name": "SIEM Operations",
+      "practices": [
+        "Normalize logs before building detections.",
+        "Track alert fidelity and suppress known noisy conditions.",
+        "Map detections to MITRE ATT&CK and business impact.",
+        "Continuously validate ingestion coverage from critical assets."
+      ]
+    },
+    {
+      "id": "incident-response",
+      "name": "Incident Response",
+      "practices": [
+        "Keep playbooks short, actionable, and owner-assigned.",
+        "Run tabletop exercises for ransomware and cloud account compromise.",
+        "Protect evidence and preserve timelines during investigations.",
+        "Capture lessons learned and update detections after each exercise or incident."
+      ]
+    },
+    {
+      "id": "hardening",
+      "name": "System Hardening",
+      "practices": [
+        "Disable unused services, ports, and local administrator accounts.",
+        "Apply CIS-aligned baselines to servers and network devices.",
+        "Enforce MFA, SSH key policies, and password rotation.",
+        "Patch operating systems, hypervisors, and firmware in scheduled windows."
+      ]
+    },
+    {
+      "id": "firewall-rules",
+      "name": "Firewall Rules",
+      "practices": [
+        "Implement least-privilege allow rules with documented ownership.",
+        "Separate temporary rules and review them for expiration.",
+        "Log denied traffic for sensitive segments and internet edges.",
+        "Validate rule sets against actual application flows before promotion."
+      ]
+    },
+    {
+      "id": "logging",
+      "name": "Logging & Retention",
+      "practices": [
+        "Use synchronized time across collectors and endpoints.",
+        "Protect log pipelines against tampering and data loss.",
+        "Define retention by regulatory need and incident response requirements.",
+        "Test restore and search of archived logs before an emergency occurs."
+      ]
+    }
+  ]
+}
