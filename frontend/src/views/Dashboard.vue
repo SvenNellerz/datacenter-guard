@@ -53,12 +53,19 @@
 import { pricingBadgeClass } from '@/utils/helpers'
 import toolsData from '@/assets/data/tools.json'
 import frameworksData from '@/assets/data/frameworks.json'
+import templatesData from '@/assets/data/templates.json'
+import playbooksData from '@/assets/data/playbooks.json'
+
+const toolCount = toolsData.tools?.length ?? 0
+const frameworkCount = frameworksData.frameworks?.length ?? 0
+const templateCount = templatesData.templates?.length ?? 0
+const playbookCount = playbooksData.playbooks?.length ?? 0
 
 const stats = [
-  { icon: '🛠️', value: '50+', label: 'Security Tools' },
-  { icon: '📋', value: '5', label: 'Frameworks' },
-  { icon: '📦', value: '20+', label: 'Templates' },
-  { icon: '🚨', value: '7', label: 'IR Playbooks' }
+  { icon: '🛠️', value: toolCount, label: 'Security Tools' },
+  { icon: '📋', value: frameworkCount, label: 'Frameworks' },
+  { icon: '📦', value: templateCount, label: 'Templates' },
+  { icon: '🚨', value: playbookCount, label: 'IR Playbooks' }
 ]
 
 const navCards = [
@@ -66,7 +73,7 @@ const navCards = [
   { path: '/pam', icon: '🔐', title: 'PAM', description: 'Privileged access management tools and workflows' },
   { path: '/monitoring', icon: '📈', title: 'Monitoring', description: 'SIEM solutions and alert configuration' },
   { path: '/compliance', icon: '✅', title: 'Compliance', description: 'Framework-based checklist builder' },
-  { path: '/tools', icon: '🛠️', title: 'Tools Reference', description: 'Searchable database of 50+ security tools' },
+  { path: '/tools', icon: '🛠️', title: 'Tools Reference', description: `Searchable database of ${toolCount} security tools` },
   { path: '/templates', icon: '📋', title: 'Templates', description: 'Terraform, Ansible and firewall templates' },
   { path: '/incident-response', icon: '🚨', title: 'Incident Response', description: 'IR playbooks and procedures' }
 ]
