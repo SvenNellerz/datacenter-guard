@@ -1,0 +1,2310 @@
+{
+  "tools": [
+    {
+      "id": "palo-alto-pa-series",
+      "name": "Palo Alto Networks PA-Series",
+      "vendor": "Palo Alto Networks",
+      "category": "Network & Firewall",
+      "description": "Next-generation firewall platform with application-aware controls, SSL decryption, and advanced threat prevention for enterprise perimeters.",
+      "pricing": "enterprise",
+      "complexity_score": 8,
+      "key_features": [
+        "Application visibility",
+        "Threat prevention",
+        "SSL decryption",
+        "WildFire integration"
+      ],
+      "use_cases": [
+        "Enterprise perimeter security",
+        "East-west segmentation",
+        "Data centre edge"
+      ],
+      "integration_capabilities": [
+        "Panorama",
+        "Cortex XSOAR",
+        "LDAP/AD",
+        "SIEM forwarding"
+      ],
+      "pros": [
+        "Strong application control",
+        "Rich automation APIs"
+      ],
+      "cons": [
+        "Premium licensing model",
+        "Requires skilled administration"
+      ],
+      "certifications": [
+        "NSS Labs recommended",
+        "Common Criteria"
+      ],
+      "alternative_tools": [
+        "Fortinet FortiGate",
+        "Check Point NGFW"
+      ],
+      "cost_estimate": "$25,000+/appliance",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "fortinet-fortigate",
+      "name": "Fortinet FortiGate",
+      "vendor": "Fortinet",
+      "category": "Network & Firewall",
+      "description": "Unified firewall appliance combining IPS, web filtering, SD-WAN, and VPN services for branch and data centre security.",
+      "pricing": "enterprise",
+      "complexity_score": 7,
+      "key_features": [
+        "IPS",
+        "SD-WAN",
+        "VPN",
+        "FortiGuard services"
+      ],
+      "use_cases": [
+        "Branch security",
+        "Data centre segmentation",
+        "Internet edge"
+      ],
+      "integration_capabilities": [
+        "FortiAnalyzer",
+        "FortiManager",
+        "Syslog",
+        "RADIUS"
+      ],
+      "pros": [
+        "Strong price-to-performance ratio",
+        "Broad security fabric integrations"
+      ],
+      "cons": [
+        "Feature sprawl can be complex",
+        "Licensing tied to subscriptions"
+      ],
+      "certifications": [
+        "ICSA Labs",
+        "Common Criteria"
+      ],
+      "alternative_tools": [
+        "Palo Alto Networks PA-Series",
+        "Juniper SRX"
+      ],
+      "cost_estimate": "$8,000+/appliance",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "cisco-asa",
+      "name": "Cisco ASA",
+      "vendor": "Cisco",
+      "category": "Network & Firewall",
+      "description": "Established adaptive security appliance for stateful firewalling, VPN, and controlled migration to Firepower services.",
+      "pricing": "paid",
+      "complexity_score": 6,
+      "key_features": [
+        "Stateful firewall",
+        "Site-to-site VPN",
+        "Remote access VPN",
+        "High availability"
+      ],
+      "use_cases": [
+        "Legacy data centres",
+        "VPN concentrators",
+        "Branch edge"
+      ],
+      "integration_capabilities": [
+        "Cisco FMC",
+        "ISE",
+        "Syslog",
+        "SNMP"
+      ],
+      "pros": [
+        "Widely deployed",
+        "Reliable VPN feature set"
+      ],
+      "cons": [
+        "Legacy UX",
+        "Less modern L7 control without add-ons"
+      ],
+      "certifications": [
+        "FIPS 140-2"
+      ],
+      "alternative_tools": [
+        "Juniper SRX",
+        "pfSense"
+      ],
+      "cost_estimate": "$5,000+/appliance",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "pfsense",
+      "name": "pfSense",
+      "vendor": "Netgate",
+      "category": "Network & Firewall",
+      "description": "Open-source firewall and router platform with strong community support, VPN, IDS/IPS add-ons, and flexible deployment models.",
+      "pricing": "free",
+      "complexity_score": 5,
+      "key_features": [
+        "Stateful firewall",
+        "VPN",
+        "Package ecosystem",
+        "Traffic shaping"
+      ],
+      "use_cases": [
+        "SMB perimeters",
+        "Lab environments",
+        "Cost-sensitive DMZs"
+      ],
+      "integration_capabilities": [
+        "Syslog",
+        "LDAP",
+        "CARP",
+        "Snort/Suricata"
+      ],
+      "pros": [
+        "Low acquisition cost",
+        "Flexible hardware choices"
+      ],
+      "cons": [
+        "Needs self-support or partner support",
+        "UI less polished than premium vendors"
+      ],
+      "certifications": [
+        "N/A"
+      ],
+      "alternative_tools": [
+        "OPNsense",
+        "Cisco ASA"
+      ],
+      "cost_estimate": "$0-$799/support tier",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "juniper-srx",
+      "name": "Juniper SRX",
+      "vendor": "Juniper Networks",
+      "category": "Network & Firewall",
+      "description": "Security platform optimized for routing-rich environments with AppSecure, IPS, and large-scale policy enforcement.",
+      "pricing": "enterprise",
+      "complexity_score": 7,
+      "key_features": [
+        "Advanced routing",
+        "IPS",
+        "AppSecure",
+        "Chassis clustering"
+      ],
+      "use_cases": [
+        "Service provider edges",
+        "Enterprise segmentation",
+        "High-throughput data centres"
+      ],
+      "integration_capabilities": [
+        "Junos Space",
+        "Netconf",
+        "Syslog",
+        "RADIUS"
+      ],
+      "pros": [
+        "Strong networking heritage",
+        "Good scale-out options"
+      ],
+      "cons": [
+        "Policy model has learning curve",
+        "Subscription features add cost"
+      ],
+      "certifications": [
+        "Common Criteria"
+      ],
+      "alternative_tools": [
+        "Fortinet FortiGate",
+        "Check Point NGFW"
+      ],
+      "cost_estimate": "$12,000+/appliance",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "checkpoint-ngfw",
+      "name": "Check Point NGFW",
+      "vendor": "Check Point",
+      "category": "Network & Firewall",
+      "description": "Enterprise firewall suite with centralized management, threat intelligence, and layered prevention across physical and virtual edges.",
+      "pricing": "enterprise",
+      "complexity_score": 8,
+      "key_features": [
+        "ThreatCloud intelligence",
+        "Central policy management",
+        "IPS",
+        "Identity awareness"
+      ],
+      "use_cases": [
+        "Multi-site enterprises",
+        "Regulated environments",
+        "Hybrid firewalling"
+      ],
+      "integration_capabilities": [
+        "SmartConsole",
+        "MFA providers",
+        "SIEM connectors",
+        "API automation"
+      ],
+      "pros": [
+        "Mature policy management",
+        "Strong threat research"
+      ],
+      "cons": [
+        "Operational overhead",
+        "Higher total cost"
+      ],
+      "certifications": [
+        "Common Criteria",
+        "NSS Labs recommended"
+      ],
+      "alternative_tools": [
+        "Palo Alto Networks PA-Series",
+        "Fortinet FortiGate"
+      ],
+      "cost_estimate": "$20,000+/appliance",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "zscaler-zia",
+      "name": "Zscaler ZIA",
+      "vendor": "Zscaler",
+      "category": "Network & Firewall",
+      "description": "Cloud-delivered secure web gateway and firewall-as-a-service platform for internet breakout, user protection, and zero-trust access.",
+      "pricing": "enterprise",
+      "complexity_score": 7,
+      "key_features": [
+        "Secure web gateway",
+        "Cloud firewall",
+        "Sandboxing",
+        "Zero trust policy"
+      ],
+      "use_cases": [
+        "Remote workforce protection",
+        "Internet breakout",
+        "Cloud-first architectures"
+      ],
+      "integration_capabilities": [
+        "IdP integrations",
+        "SIEM export",
+        "CASB",
+        "API automation"
+      ],
+      "pros": [
+        "No appliance footprint",
+        "Strong user-based policies"
+      ],
+      "cons": [
+        "Dependency on internet pathing",
+        "Premium SaaS pricing"
+      ],
+      "certifications": [
+        "FedRAMP",
+        "ISO 27001"
+      ],
+      "alternative_tools": [
+        "Cloudflare WAF",
+        "Palo Alto Prisma Access"
+      ],
+      "cost_estimate": "$8/user/month+",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "cloudflare-waf",
+      "name": "Cloudflare WAF",
+      "vendor": "Cloudflare",
+      "category": "Network & Firewall",
+      "description": "Cloud WAF and edge security service with DDoS protection, bot management, and API shielding for internet-facing applications.",
+      "pricing": "freemium",
+      "complexity_score": 4,
+      "key_features": [
+        "Managed rules",
+        "DDoS protection",
+        "Bot mitigation",
+        "API protection"
+      ],
+      "use_cases": [
+        "Public web apps",
+        "API front doors",
+        "CDN edge protection"
+      ],
+      "integration_capabilities": [
+        "Cloudflare CDN",
+        "Workers",
+        "SIEM Logpush",
+        "Terraform"
+      ],
+      "pros": [
+        "Rapid deployment",
+        "Excellent edge performance"
+      ],
+      "cons": [
+        "Best value requires higher plans",
+        "Less suited to on-prem only use cases"
+      ],
+      "certifications": [
+        "SOC 2",
+        "ISO 27001"
+      ],
+      "alternative_tools": [
+        "Imperva WAF",
+        "Barracuda CloudGen Firewall"
+      ],
+      "cost_estimate": "$20/month to enterprise",
+      "deployment_complexity": "Low"
+    },
+    {
+      "id": "imperva-waf",
+      "name": "Imperva WAF",
+      "vendor": "Imperva",
+      "category": "Network & Firewall",
+      "description": "Application and API protection platform focused on high-fidelity WAF policies, bot defense, and data-centric security controls.",
+      "pricing": "enterprise",
+      "complexity_score": 7,
+      "key_features": [
+        "Advanced WAF",
+        "Bot management",
+        "API security",
+        "DDoS protection"
+      ],
+      "use_cases": [
+        "E-commerce platforms",
+        "Financial portals",
+        "High-risk APIs"
+      ],
+      "integration_capabilities": [
+        "SIEM export",
+        "CDN integrations",
+        "Ticketing tools",
+        "SAML"
+      ],
+      "pros": [
+        "Strong managed protection",
+        "Good API security posture"
+      ],
+      "cons": [
+        "Enterprise negotiations required",
+        "Complex tuning for custom apps"
+      ],
+      "certifications": [
+        "PCI DSS ready",
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Cloudflare WAF",
+        "Akamai App & API Protector"
+      ],
+      "cost_estimate": "$3,000+/month",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "barracuda-cloudgen-firewall",
+      "name": "Barracuda CloudGen Firewall",
+      "vendor": "Barracuda",
+      "category": "Network & Firewall",
+      "description": "CloudGen Firewall provides distributed firewalling, SD-WAN, and secure connectivity across branches and private cloud estates.",
+      "pricing": "paid",
+      "complexity_score": 6,
+      "key_features": [
+        "SD-WAN",
+        "VPN",
+        "Intrusion prevention",
+        "Central management"
+      ],
+      "use_cases": [
+        "Regional offices",
+        "Cloud branch connectivity",
+        "Mid-market data centres"
+      ],
+      "integration_capabilities": [
+        "Barracuda Control Center",
+        "Syslog",
+        "LDAP",
+        "Azure/AWS"
+      ],
+      "pros": [
+        "Good WAN optimization",
+        "Flexible appliance and virtual options"
+      ],
+      "cons": [
+        "Smaller ecosystem than top-tier vendors",
+        "Feature depth varies by SKU"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Fortinet FortiGate",
+        "Juniper SRX"
+      ],
+      "cost_estimate": "$4,000+/appliance",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "hashicorp-vault",
+      "name": "HashiCorp Vault",
+      "vendor": "HashiCorp",
+      "category": "PAM",
+      "description": "Secrets management and privileged access platform supporting dynamic credentials, SSH brokering, PKI, and centralized rotation workflows.",
+      "pricing": "enterprise",
+      "complexity_score": 7,
+      "key_features": [
+        "Password Vaulting",
+        "SSH Key Management",
+        "API Access",
+        "Audit Logging",
+        "RBAC"
+      ],
+      "use_cases": [
+        "Machine secrets",
+        "Database credential rotation",
+        "SSH access brokering"
+      ],
+      "integration_capabilities": [
+        "Kubernetes",
+        "Terraform",
+        "LDAP Integration",
+        "Cloud IAM"
+      ],
+      "pros": [
+        "Excellent automation story",
+        "Strong secret lifecycle management"
+      ],
+      "cons": [
+        "Enterprise features cost extra",
+        "Operational design matters"
+      ],
+      "certifications": [
+        "SOC 2",
+        "FIPS 140-2"
+      ],
+      "alternative_tools": [
+        "CyberArk Privileged Access Manager",
+        "Delinea Secret Server"
+      ],
+      "cost_estimate": "$0 open source / enterprise custom",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "cyberark-privileged-access-manager",
+      "name": "CyberArk Privileged Access Manager",
+      "vendor": "CyberArk",
+      "category": "PAM",
+      "description": "Comprehensive enterprise PAM suite for vaulting, session isolation, threat analytics, and privileged identity governance.",
+      "pricing": "enterprise",
+      "complexity_score": 9,
+      "key_features": [
+        "MFA Support",
+        "Session Recording",
+        "Password Vaulting",
+        "RBAC",
+        "Audit Logging"
+      ],
+      "use_cases": [
+        "Tier-0 admin protection",
+        "Privileged session control",
+        "Compliance-driven PAM"
+      ],
+      "integration_capabilities": [
+        "SIEM forwarding",
+        "ServiceNow",
+        "LDAP Integration",
+        "REST API"
+      ],
+      "pros": [
+        "Best-in-class enterprise PAM controls",
+        "Strong session oversight"
+      ],
+      "cons": [
+        "Long implementation timelines",
+        "High procurement and services cost"
+      ],
+      "certifications": [
+        "ISO 27001",
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Delinea Secret Server",
+        "Okta Privileged Access"
+      ],
+      "cost_estimate": "$75,000+/year",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "delinea-secret-server",
+      "name": "Delinea Secret Server",
+      "vendor": "Delinea",
+      "category": "PAM",
+      "description": "Secret vault and privileged account platform balancing usability, discovery, rotation, and role-based access for hybrid estates.",
+      "pricing": "paid",
+      "complexity_score": 7,
+      "key_features": [
+        "Password Vaulting",
+        "Session Recording",
+        "RBAC",
+        "API Access",
+        "Audit Logging"
+      ],
+      "use_cases": [
+        "Server admin accounts",
+        "Service account rotation",
+        "Shared credential governance"
+      ],
+      "integration_capabilities": [
+        "Active Directory",
+        "SIEM",
+        "Ticketing tools",
+        "DevOps pipelines"
+      ],
+      "pros": [
+        "User-friendly interface",
+        "Strong discovery tooling"
+      ],
+      "cons": [
+        "Advanced workflows may need tuning",
+        "Some integrations require extra modules"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "CyberArk Privileged Access Manager",
+        "HashiCorp Vault"
+      ],
+      "cost_estimate": "$15,000+/year",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "okta-privileged-access",
+      "name": "Okta Privileged Access",
+      "vendor": "Okta",
+      "category": "PAM",
+      "description": "Cloud-native privileged access service emphasizing ephemeral credentials, just-in-time access, MFA enforcement, and modern identity integration.",
+      "pricing": "enterprise",
+      "complexity_score": 6,
+      "key_features": [
+        "MFA Support",
+        "SSH Key Management",
+        "RBAC",
+        "LDAP Integration",
+        "Audit Logging"
+      ],
+      "use_cases": [
+        "Cloud admin access",
+        "Developer SSH access",
+        "Just-in-time elevation"
+      ],
+      "integration_capabilities": [
+        "Okta Identity Cloud",
+        "SCIM",
+        "SIEM",
+        "Cloud providers"
+      ],
+      "pros": [
+        "Strong identity-centric workflows",
+        "Good remote workforce fit"
+      ],
+      "cons": [
+        "Less traditional vault depth",
+        "Feature breadth still evolving"
+      ],
+      "certifications": [
+        "SOC 2",
+        "FedRAMP moderate"
+      ],
+      "alternative_tools": [
+        "Microsoft Azure AD PIM",
+        "HashiCorp Vault"
+      ],
+      "cost_estimate": "$10/user/month+",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "microsoft-azure-ad-pim",
+      "name": "Microsoft Azure AD PIM",
+      "vendor": "Microsoft",
+      "category": "PAM",
+      "description": "Privileged Identity Management for Entra ID and Azure resources with JIT roles, approvals, access reviews, and activity auditing.",
+      "pricing": "paid",
+      "complexity_score": 5,
+      "key_features": [
+        "MFA Support",
+        "RBAC",
+        "Audit Logging",
+        "API Access",
+        "Approval workflows"
+      ],
+      "use_cases": [
+        "Azure subscription governance",
+        "Privileged role activation",
+        "Conditional elevation"
+      ],
+      "integration_capabilities": [
+        "Microsoft Entra ID",
+        "Azure Monitor",
+        "Logic Apps",
+        "Graph API"
+      ],
+      "pros": [
+        "Native for Microsoft estates",
+        "Strong identity governance value"
+      ],
+      "cons": [
+        "Not a full session vaulting platform",
+        "Best fit in Azure-centric environments"
+      ],
+      "certifications": [
+        "ISO 27001",
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Okta Privileged Access",
+        "CyberArk Privileged Access Manager"
+      ],
+      "cost_estimate": "$9/user/month P2+",
+      "deployment_complexity": "Low"
+    },
+    {
+      "id": "splunk-enterprise-security",
+      "name": "Splunk Enterprise Security",
+      "vendor": "Splunk",
+      "category": "SIEM",
+      "description": "Market-leading SIEM with extensive data onboarding, search analytics, correlation rules, and security operations content.",
+      "pricing": "enterprise",
+      "complexity_score": 9,
+      "key_features": [
+        "Correlation search",
+        "Threat intelligence",
+        "UEBA add-ons",
+        "SOAR integrations"
+      ],
+      "use_cases": [
+        "Large SOCs",
+        "Complex log analytics",
+        "Detection engineering"
+      ],
+      "integration_capabilities": [
+        "Syslog",
+        "EDR",
+        "Cloud services",
+        "SOAR platforms"
+      ],
+      "pros": [
+        "Highly flexible analytics",
+        "Massive ecosystem"
+      ],
+      "cons": [
+        "Can be expensive at scale",
+        "Requires detection engineering expertise"
+      ],
+      "certifications": [
+        "SOC 2",
+        "FedRAMP"
+      ],
+      "alternative_tools": [
+        "Elastic SIEM",
+        "Sumo Logic"
+      ],
+      "cost_estimate": "$150+/GB ingested",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "elk-stack",
+      "name": "ELK Stack",
+      "vendor": "Elastic",
+      "category": "SIEM",
+      "description": "Elasticsearch, Logstash, and Kibana stack for centralized logging, search, and customizable security analytics.",
+      "pricing": "free",
+      "complexity_score": 7,
+      "key_features": [
+        "Log aggregation",
+        "Dashboards",
+        "Search analytics",
+        "Detection rules"
+      ],
+      "use_cases": [
+        "Self-managed SIEM",
+        "Custom observability",
+        "Lab SOC buildouts"
+      ],
+      "integration_capabilities": [
+        "Beats",
+        "Kafka",
+        "Syslog",
+        "APIs"
+      ],
+      "pros": [
+        "Open and flexible",
+        "Large community"
+      ],
+      "cons": [
+        "Requires tuning and infrastructure care",
+        "Advanced features may need paid tiers"
+      ],
+      "certifications": [
+        "N/A"
+      ],
+      "alternative_tools": [
+        "Graylog",
+        "Wazuh"
+      ],
+      "cost_estimate": "$0 self-managed / enterprise add-ons",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "wazuh",
+      "name": "Wazuh",
+      "vendor": "Wazuh",
+      "category": "SIEM",
+      "description": "Open-source XDR and SIEM platform focused on host monitoring, file integrity, vulnerability data, and compliance reporting.",
+      "pricing": "free",
+      "complexity_score": 6,
+      "key_features": [
+        "Agent-based monitoring",
+        "File integrity monitoring",
+        "Compliance mapping",
+        "Threat detection"
+      ],
+      "use_cases": [
+        "Mid-market SOCs",
+        "Open-source security operations",
+        "Server monitoring"
+      ],
+      "integration_capabilities": [
+        "Elastic",
+        "Syslog",
+        "Cloud APIs",
+        "Ticketing"
+      ],
+      "pros": [
+        "Strong value for cost",
+        "Good host-centric telemetry"
+      ],
+      "cons": [
+        "Scaling needs planning",
+        "UI less polished than premium tools"
+      ],
+      "certifications": [
+        "PCI DSS mappings",
+        "HIPAA mappings"
+      ],
+      "alternative_tools": [
+        "ELK Stack",
+        "Security Onion"
+      ],
+      "cost_estimate": "$0 open source / support available",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "sumo-logic",
+      "name": "Sumo Logic",
+      "vendor": "Sumo Logic",
+      "category": "SIEM",
+      "description": "Cloud-native analytics and SIEM service with rapid onboarding, managed content, and cloud workload visibility.",
+      "pricing": "paid",
+      "complexity_score": 6,
+      "key_features": [
+        "Cloud SIEM",
+        "Managed detections",
+        "UEBA",
+        "Dashboards"
+      ],
+      "use_cases": [
+        "Cloud-first SOCs",
+        "Fast SIEM deployment",
+        "SaaS monitoring"
+      ],
+      "integration_capabilities": [
+        "AWS",
+        "Azure",
+        "GCP",
+        "SOAR and ticketing"
+      ],
+      "pros": [
+        "Fast to onboard",
+        "Minimal infrastructure management"
+      ],
+      "cons": [
+        "Cost tied to data volume",
+        "Less customization than self-managed stacks"
+      ],
+      "certifications": [
+        "SOC 2",
+        "ISO 27001"
+      ],
+      "alternative_tools": [
+        "Splunk Enterprise Security",
+        "Datadog Security"
+      ],
+      "cost_estimate": "$2.50+/GB ingested",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "graylog",
+      "name": "Graylog",
+      "vendor": "Graylog",
+      "category": "SIEM",
+      "description": "Centralized log management and security analytics platform emphasizing pipeline processing, stream routing, and alerting.",
+      "pricing": "freemium",
+      "complexity_score": 6,
+      "key_features": [
+        "Pipeline rules",
+        "Alerting",
+        "Centralized logging",
+        "Role-based access"
+      ],
+      "use_cases": [
+        "Log centralization",
+        "Mid-sized SOCs",
+        "Compliance evidence"
+      ],
+      "integration_capabilities": [
+        "Syslog",
+        "Beats",
+        "LDAP",
+        "REST API"
+      ],
+      "pros": [
+        "Straightforward log workflows",
+        "Good operational search experience"
+      ],
+      "cons": [
+        "Advanced enterprise features cost extra",
+        "Smaller analytics ecosystem"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "ELK Stack",
+        "Wazuh"
+      ],
+      "cost_estimate": "$0 open / enterprise custom",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "datadog-security",
+      "name": "Datadog Security",
+      "vendor": "Datadog",
+      "category": "SIEM",
+      "description": "Security monitoring built on Datadog observability telemetry with workload signals, cloud posture, and threat detection.",
+      "pricing": "paid",
+      "complexity_score": 5,
+      "key_features": [
+        "Cloud SIEM",
+        "Runtime detection",
+        "Threat intel matching",
+        "Unified observability"
+      ],
+      "use_cases": [
+        "Cloud-native teams",
+        "DevSecOps",
+        "Container-heavy estates"
+      ],
+      "integration_capabilities": [
+        "Kubernetes",
+        "AWS",
+        "CI/CD",
+        "Ticketing tools"
+      ],
+      "pros": [
+        "Strong developer experience",
+        "Unified metrics and security context"
+      ],
+      "cons": [
+        "Can become costly across products",
+        "Less traditional SIEM depth for some use cases"
+      ],
+      "certifications": [
+        "SOC 2",
+        "ISO 27001"
+      ],
+      "alternative_tools": [
+        "New Relic",
+        "Sumo Logic"
+      ],
+      "cost_estimate": "$0.20+/host/day plus logs",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "new-relic-security",
+      "name": "New Relic Security",
+      "vendor": "New Relic",
+      "category": "SIEM",
+      "description": "Security analytics capability that correlates logs, APM, and infrastructure telemetry for streamlined cloud detections.",
+      "pricing": "freemium",
+      "complexity_score": 4,
+      "key_features": [
+        "Log analytics",
+        "Alerting",
+        "Cloud detections",
+        "NRQL queries"
+      ],
+      "use_cases": [
+        "Developer-led monitoring",
+        "Application security visibility",
+        "Unified telemetry"
+      ],
+      "integration_capabilities": [
+        "Kubernetes",
+        "APM",
+        "Cloud logs",
+        "Webhook integrations"
+      ],
+      "pros": [
+        "Easy for existing New Relic users",
+        "Fast dashboards"
+      ],
+      "cons": [
+        "Less mature dedicated SIEM workflows",
+        "Advanced SOC use cases may need supplements"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Datadog Security",
+        "Sumo Logic"
+      ],
+      "cost_estimate": "$0 free tier / usage-based",
+      "deployment_complexity": "Low"
+    },
+    {
+      "id": "elastic-siem",
+      "name": "Elastic SIEM",
+      "vendor": "Elastic",
+      "category": "SIEM",
+      "description": "Elastic Security combines endpoint telemetry, detections, cases, and hunting workflows on the Elastic platform.",
+      "pricing": "paid",
+      "complexity_score": 7,
+      "key_features": [
+        "Detection engine",
+        "Case management",
+        "Endpoint telemetry",
+        "Threat hunting"
+      ],
+      "use_cases": [
+        "Unified SecOps",
+        "Elastic-native SOCs",
+        "Detection engineering"
+      ],
+      "integration_capabilities": [
+        "Beats",
+        "Elastic Agent",
+        "SOAR connectors",
+        "Cloud APIs"
+      ],
+      "pros": [
+        "Strong detections plus search",
+        "Good for self-managed and cloud"
+      ],
+      "cons": [
+        "Rule tuning required",
+        "Enterprise value improves on paid tiers"
+      ],
+      "certifications": [
+        "SOC 2",
+        "FedRAMP moderate"
+      ],
+      "alternative_tools": [
+        "Splunk Enterprise Security",
+        "Wazuh"
+      ],
+      "cost_estimate": "$95+/month plus ingest",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "nessus-professional",
+      "name": "Nessus Professional",
+      "vendor": "Tenable",
+      "category": "Vulnerability Management",
+      "description": "Widely used vulnerability scanner for internal and external asset assessments, misconfiguration checks, and audit coverage.",
+      "pricing": "paid",
+      "complexity_score": 4,
+      "key_features": [
+        "Network scanning",
+        "Configuration audits",
+        "Plugin feed",
+        "Reporting"
+      ],
+      "use_cases": [
+        "Periodic assessments",
+        "Consulting engagements",
+        "Internal scans"
+      ],
+      "integration_capabilities": [
+        "Tenable.io",
+        "CSV export",
+        "Ticketing tools",
+        "Credentialed scans"
+      ],
+      "pros": [
+        "Large plugin library",
+        "Easy to operate"
+      ],
+      "cons": [
+        "Single-user orientation",
+        "Not a full remediation platform"
+      ],
+      "certifications": [
+        "PCI ASV ecosystem support"
+      ],
+      "alternative_tools": [
+        "Qualys VMDR",
+        "Greenbone OpenVAS"
+      ],
+      "cost_estimate": "$4,390/year",
+      "deployment_complexity": "Low"
+    },
+    {
+      "id": "qualys-vmdr",
+      "name": "Qualys VMDR",
+      "vendor": "Qualys",
+      "category": "Vulnerability Management",
+      "description": "Cloud-delivered VMDR platform for discovery, vulnerability assessment, prioritization, patching, and remediation tracking.",
+      "pricing": "enterprise",
+      "complexity_score": 6,
+      "key_features": [
+        "Asset inventory",
+        "Prioritization",
+        "Patch management",
+        "Continuous assessment"
+      ],
+      "use_cases": [
+        "Enterprise exposure management",
+        "Hybrid asset visibility",
+        "Compliance scanning"
+      ],
+      "integration_capabilities": [
+        "CMDBs",
+        "Ticketing",
+        "Cloud platforms",
+        "Agents"
+      ],
+      "pros": [
+        "Broad platform coverage",
+        "Continuous cloud delivery"
+      ],
+      "cons": [
+        "Licensing can be complex",
+        "UI depth takes time to master"
+      ],
+      "certifications": [
+        "PCI DSS",
+        "FedRAMP"
+      ],
+      "alternative_tools": [
+        "Rapid7 InsightVM",
+        "Tenable.io"
+      ],
+      "cost_estimate": "$20+/asset/year",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "rapid7-insightvm",
+      "name": "Rapid7 InsightVM",
+      "vendor": "Rapid7",
+      "category": "Vulnerability Management",
+      "description": "Risk-based vulnerability management platform with live dashboards, remediation projects, and exposure prioritization.",
+      "pricing": "paid",
+      "complexity_score": 6,
+      "key_features": [
+        "Risk scoring",
+        "Live dashboards",
+        "Remediation workflows",
+        "Agent scanning"
+      ],
+      "use_cases": [
+        "Enterprise programs",
+        "Risk prioritization",
+        "DevSecOps handoff"
+      ],
+      "integration_capabilities": [
+        "InsightIDR",
+        "Jira",
+        "CMDB",
+        "Cloud connectors"
+      ],
+      "pros": [
+        "Actionable remediation views",
+        "Good adjacent platform integrations"
+      ],
+      "cons": [
+        "Agent and console planning needed",
+        "Commercial licensing"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Qualys VMDR",
+        "Tenable.io"
+      ],
+      "cost_estimate": "$22+/asset/year",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "greenbone-openvas",
+      "name": "Greenbone OpenVAS",
+      "vendor": "Greenbone",
+      "category": "Vulnerability Management",
+      "description": "Open-source vulnerability scanning engine suited for self-hosted security baselines, internal audits, and lab operations.",
+      "pricing": "free",
+      "complexity_score": 5,
+      "key_features": [
+        "Network scanning",
+        "Open feed",
+        "Schedule scans",
+        "Detailed findings"
+      ],
+      "use_cases": [
+        "Lab environments",
+        "Budget-conscious vulnerability scanning",
+        "Internal assessments"
+      ],
+      "integration_capabilities": [
+        "Syslog",
+        "CSV export",
+        "NVT feeds",
+        "Ticket exports"
+      ],
+      "pros": [
+        "No license cost",
+        "Transparent scan engine"
+      ],
+      "cons": [
+        "Operational upkeep required",
+        "Results tuning can be noisy"
+      ],
+      "certifications": [
+        "N/A"
+      ],
+      "alternative_tools": [
+        "Nessus Professional",
+        "Wazuh"
+      ],
+      "cost_estimate": "$0 open source",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "tenable-io",
+      "name": "Tenable.io",
+      "vendor": "Tenable",
+      "category": "Vulnerability Management",
+      "description": "Cloud-based exposure management platform providing asset-centric vulnerability monitoring, prioritization, and web app integrations.",
+      "pricing": "paid",
+      "complexity_score": 5,
+      "key_features": [
+        "Asset management",
+        "Risk-based prioritization",
+        "Cloud connectors",
+        "Agent-based scanning"
+      ],
+      "use_cases": [
+        "Distributed enterprises",
+        "Cloud estates",
+        "Continuous exposure tracking"
+      ],
+      "integration_capabilities": [
+        "AWS",
+        "Azure",
+        "Container registries",
+        "Ticketing tools"
+      ],
+      "pros": [
+        "Strong asset coverage",
+        "Simple SaaS operations"
+      ],
+      "cons": [
+        "Usage cost scales with inventory",
+        "Less custom workflow depth than some peers"
+      ],
+      "certifications": [
+        "SOC 2",
+        "FedRAMP"
+      ],
+      "alternative_tools": [
+        "Qualys VMDR",
+        "Rapid7 InsightVM"
+      ],
+      "cost_estimate": "$2,500+/year",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "aqua-security",
+      "name": "Aqua Security",
+      "vendor": "Aqua Security",
+      "category": "Container Security",
+      "description": "CNAPP and container runtime security platform for image assurance, Kubernetes hardening, and cloud workload protection.",
+      "pricing": "enterprise",
+      "complexity_score": 8,
+      "key_features": [
+        "Image scanning",
+        "Runtime protection",
+        "Kubernetes posture",
+        "Secrets detection"
+      ],
+      "use_cases": [
+        "Production Kubernetes",
+        "Shift-left container checks",
+        "Cloud workload security"
+      ],
+      "integration_capabilities": [
+        "CI/CD",
+        "EKS/AKS/GKE",
+        "Ticketing",
+        "SIEM"
+      ],
+      "pros": [
+        "Comprehensive cloud-native scope",
+        "Strong runtime controls"
+      ],
+      "cons": [
+        "Enterprise pricing",
+        "Requires policy tuning"
+      ],
+      "certifications": [
+        "SOC 2",
+        "ISO 27001"
+      ],
+      "alternative_tools": [
+        "Prisma Cloud",
+        "Sysdig Secure"
+      ],
+      "cost_estimate": "$30,000+/year",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "snyk-container",
+      "name": "Snyk Container",
+      "vendor": "Snyk",
+      "category": "Container Security",
+      "description": "Developer-friendly container scanning service for images, Dockerfiles, and registry policies integrated into build pipelines.",
+      "pricing": "paid",
+      "complexity_score": 4,
+      "key_features": [
+        "Image vulnerability scanning",
+        "Dockerfile advice",
+        "PR feedback",
+        "Policy gates"
+      ],
+      "use_cases": [
+        "Developer workflows",
+        "Registry hygiene",
+        "CI quality gates"
+      ],
+      "integration_capabilities": [
+        "GitHub",
+        "GitLab",
+        "Docker Hub",
+        "Kubernetes"
+      ],
+      "pros": [
+        "Excellent developer UX",
+        "Fast remediation guidance"
+      ],
+      "cons": [
+        "Runtime coverage limited compared with CNAPP suites",
+        "Commercial at scale"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Aqua Security",
+        "Falco"
+      ],
+      "cost_estimate": "$25+/developer/month",
+      "deployment_complexity": "Low"
+    },
+    {
+      "id": "prisma-cloud-twistlock",
+      "name": "Twistlock (Prisma Cloud)",
+      "vendor": "Palo Alto Networks",
+      "category": "Container Security",
+      "description": "Prisma Cloud workload protection offering image, runtime, and compliance controls for containers and hosts.",
+      "pricing": "enterprise",
+      "complexity_score": 8,
+      "key_features": [
+        "Runtime defense",
+        "Image assurance",
+        "Compliance checks",
+        "Host protection"
+      ],
+      "use_cases": [
+        "Enterprise cloud security",
+        "Container hardening",
+        "Hybrid runtime defense"
+      ],
+      "integration_capabilities": [
+        "CI/CD",
+        "SIEM",
+        "Cloud accounts",
+        "Kubernetes"
+      ],
+      "pros": [
+        "Broad cloud security coverage",
+        "Strong runtime enforcement"
+      ],
+      "cons": [
+        "Platform breadth increases complexity",
+        "Premium cost"
+      ],
+      "certifications": [
+        "SOC 2",
+        "FedRAMP"
+      ],
+      "alternative_tools": [
+        "Aqua Security",
+        "Sysdig Secure"
+      ],
+      "cost_estimate": "$40,000+/year",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "sysdig-secure",
+      "name": "Sysdig Secure",
+      "vendor": "Sysdig",
+      "category": "Container Security",
+      "description": "Runtime and posture security platform leveraging eBPF-based visibility for Kubernetes and container workloads.",
+      "pricing": "paid",
+      "complexity_score": 7,
+      "key_features": [
+        "Runtime threat detection",
+        "Image scanning",
+        "Kubernetes posture",
+        "eBPF telemetry"
+      ],
+      "use_cases": [
+        "Kubernetes security teams",
+        "Cloud runtime monitoring",
+        "Container forensics"
+      ],
+      "integration_capabilities": [
+        "Prometheus",
+        "Falco rules",
+        "SIEM",
+        "Cloud providers"
+      ],
+      "pros": [
+        "Deep runtime visibility",
+        "Strong Kubernetes focus"
+      ],
+      "cons": [
+        "Operational tuning required",
+        "Smaller ecosystem than hyperscalers"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Falco",
+        "Aqua Security"
+      ],
+      "cost_estimate": "$20,000+/year",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "falco",
+      "name": "Falco",
+      "vendor": "The Falco Project",
+      "category": "Container Security",
+      "description": "Open-source runtime threat detection engine for Kubernetes and Linux using syscall and cloud-native signal analysis.",
+      "pricing": "free",
+      "complexity_score": 6,
+      "key_features": [
+        "Runtime detection",
+        "Custom rules",
+        "Kubernetes awareness",
+        "Syscall monitoring"
+      ],
+      "use_cases": [
+        "Open-source runtime alerting",
+        "Kubernetes baseline detection",
+        "Security labs"
+      ],
+      "integration_capabilities": [
+        "Kubernetes",
+        "Sysdig",
+        "Webhook outputs",
+        "SIEM"
+      ],
+      "pros": [
+        "Free and flexible",
+        "Strong community rule sets"
+      ],
+      "cons": [
+        "Requires tuning to reduce noise",
+        "No full management plane"
+      ],
+      "certifications": [
+        "CNCF graduated"
+      ],
+      "alternative_tools": [
+        "Sysdig Secure",
+        "Aqua Security"
+      ],
+      "cost_estimate": "$0 open source",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "terraform",
+      "name": "Terraform",
+      "vendor": "HashiCorp",
+      "category": "Configuration Management",
+      "description": "Infrastructure as code platform for provisioning cloud, network, and security resources with reusable modules and policy workflows.",
+      "pricing": "free",
+      "complexity_score": 6,
+      "key_features": [
+        "IaC modules",
+        "Plan/apply workflow",
+        "State management",
+        "Provider ecosystem"
+      ],
+      "use_cases": [
+        "Cloud provisioning",
+        "Firewall automation",
+        "Repeatable environments"
+      ],
+      "integration_capabilities": [
+        "Cloud APIs",
+        "GitHub Actions",
+        "Policy as code",
+        "Secrets managers"
+      ],
+      "pros": [
+        "Huge ecosystem",
+        "Strong multi-cloud support"
+      ],
+      "cons": [
+        "State management needs discipline",
+        "Team workflows need governance"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "AWS CloudFormation",
+        "Ansible"
+      ],
+      "cost_estimate": "$0 open source / HCP tiers",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "ansible",
+      "name": "Ansible",
+      "vendor": "Red Hat",
+      "category": "Configuration Management",
+      "description": "Agentless automation framework for server hardening, patching, configuration drift control, and orchestration.",
+      "pricing": "free",
+      "complexity_score": 5,
+      "key_features": [
+        "Playbooks",
+        "Idempotent tasks",
+        "Inventory management",
+        "Roles and collections"
+      ],
+      "use_cases": [
+        "Linux hardening",
+        "Patch automation",
+        "App deployment"
+      ],
+      "integration_capabilities": [
+        "SSH",
+        "WinRM",
+        "Vault",
+        "AWX/Tower"
+      ],
+      "pros": [
+        "Easy to start",
+        "Readable YAML workflows"
+      ],
+      "cons": [
+        "Performance can slow at very large scale",
+        "State tracking is lighter than some peers"
+      ],
+      "certifications": [
+        "N/A"
+      ],
+      "alternative_tools": [
+        "Chef Infra",
+        "Puppet Enterprise"
+      ],
+      "cost_estimate": "$0 open source / AAP subscription",
+      "deployment_complexity": "Low"
+    },
+    {
+      "id": "puppet-enterprise",
+      "name": "Puppet Enterprise",
+      "vendor": "Puppet",
+      "category": "Configuration Management",
+      "description": "Policy-based configuration management platform with desired state enforcement, reporting, and role-based governance.",
+      "pricing": "enterprise",
+      "complexity_score": 7,
+      "key_features": [
+        "Desired state enforcement",
+        "Reporting",
+        "Role-based access",
+        "Agent orchestration"
+      ],
+      "use_cases": [
+        "Large server fleets",
+        "Compliance baselines",
+        "Configuration drift management"
+      ],
+      "integration_capabilities": [
+        "Foreman",
+        "CMDBs",
+        "ServiceNow",
+        "Git"
+      ],
+      "pros": [
+        "Mature state management",
+        "Strong reporting"
+      ],
+      "cons": [
+        "Agent overhead",
+        "Steeper DSL learning curve"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Chef Infra",
+        "Ansible"
+      ],
+      "cost_estimate": "$120+/node/year",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "chef-infra",
+      "name": "Chef Infra",
+      "vendor": "Progress",
+      "category": "Configuration Management",
+      "description": "Infrastructure automation platform using policy-as-code to manage application and operating system configuration at scale.",
+      "pricing": "paid",
+      "complexity_score": 7,
+      "key_features": [
+        "Cookbooks",
+        "Policyfiles",
+        "Compliance profiles",
+        "Drift remediation"
+      ],
+      "use_cases": [
+        "Complex server estates",
+        "Compliance automation",
+        "Patch baselines"
+      ],
+      "integration_capabilities": [
+        "InSpec",
+        "Automate",
+        "Cloud APIs",
+        "Git"
+      ],
+      "pros": [
+        "Powerful for code-driven ops teams",
+        "Strong testable automation"
+      ],
+      "cons": [
+        "Ruby DSL barrier for some teams",
+        "Operational overhead"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Puppet Enterprise",
+        "Ansible"
+      ],
+      "cost_estimate": "$137+/node/year",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "aws-cloudformation",
+      "name": "AWS CloudFormation",
+      "vendor": "Amazon Web Services",
+      "category": "Configuration Management",
+      "description": "Native AWS infrastructure as code service for provisioning, updating, and governing AWS stacks.",
+      "pricing": "free",
+      "complexity_score": 5,
+      "key_features": [
+        "Native AWS templates",
+        "Change sets",
+        "Drift detection",
+        "Stack policies"
+      ],
+      "use_cases": [
+        "AWS landing zones",
+        "Network provisioning",
+        "Guardrail automation"
+      ],
+      "integration_capabilities": [
+        "AWS services",
+        "Service Catalog",
+        "CodePipeline",
+        "CloudTrail"
+      ],
+      "pros": [
+        "Native AWS integration",
+        "No separate toolchain required"
+      ],
+      "cons": [
+        "AWS-only scope",
+        "Template ergonomics less friendly than HCL"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Terraform",
+        "AWS CDK"
+      ],
+      "cost_estimate": "$0 service charge",
+      "deployment_complexity": "Low"
+    },
+    {
+      "id": "prometheus",
+      "name": "Prometheus",
+      "vendor": "CNCF",
+      "category": "Monitoring",
+      "description": "Open-source monitoring and alerting toolkit optimized for time-series metrics, service health, and Kubernetes observability.",
+      "pricing": "free",
+      "complexity_score": 5,
+      "key_features": [
+        "Metrics scraping",
+        "PromQL",
+        "Alertmanager",
+        "Service discovery"
+      ],
+      "use_cases": [
+        "Infrastructure monitoring",
+        "Kubernetes metrics",
+        "Capacity planning"
+      ],
+      "integration_capabilities": [
+        "Grafana",
+        "Kubernetes",
+        "Alertmanager",
+        "Exporters"
+      ],
+      "pros": [
+        "Open standard metrics ecosystem",
+        "Powerful query language"
+      ],
+      "cons": [
+        "Long-term storage requires add-ons",
+        "Not a log platform"
+      ],
+      "certifications": [
+        "CNCF graduated"
+      ],
+      "alternative_tools": [
+        "Zabbix",
+        "New Relic Infrastructure"
+      ],
+      "cost_estimate": "$0 open source",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "grafana",
+      "name": "Grafana",
+      "vendor": "Grafana Labs",
+      "category": "Monitoring",
+      "description": "Visualization and observability platform for dashboards, alerting, synthetic checks, and unified telemetry views.",
+      "pricing": "free",
+      "complexity_score": 4,
+      "key_features": [
+        "Dashboards",
+        "Alerting",
+        "Data source federation",
+        "Annotations"
+      ],
+      "use_cases": [
+        "NOC dashboards",
+        "Observability portals",
+        "Executive reporting"
+      ],
+      "integration_capabilities": [
+        "Prometheus",
+        "Loki",
+        "Elasticsearch",
+        "Cloud APIs"
+      ],
+      "pros": [
+        "Best-in-class dashboards",
+        "Wide plugin ecosystem"
+      ],
+      "cons": [
+        "Alerting and permissions deepen in paid tiers",
+        "Dashboard sprawl can occur"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "New Relic Infrastructure",
+        "Datadog"
+      ],
+      "cost_estimate": "$0 open / cloud usage-based",
+      "deployment_complexity": "Low"
+    },
+    {
+      "id": "zabbix",
+      "name": "Zabbix",
+      "vendor": "Zabbix",
+      "category": "Monitoring",
+      "description": "Enterprise monitoring platform with agents, templates, auto-discovery, and alert escalation for servers and network devices.",
+      "pricing": "free",
+      "complexity_score": 6,
+      "key_features": [
+        "Agent monitoring",
+        "Auto-discovery",
+        "Templates",
+        "Escalations"
+      ],
+      "use_cases": [
+        "Data centre monitoring",
+        "Network visibility",
+        "Infrastructure SLA tracking"
+      ],
+      "integration_capabilities": [
+        "SNMP",
+        "IPMI",
+        "Webhook alerts",
+        "LDAP"
+      ],
+      "pros": [
+        "Comprehensive built-in capabilities",
+        "Good network device support"
+      ],
+      "cons": [
+        "UI feels dated to some users",
+        "Scaling needs tuning"
+      ],
+      "certifications": [
+        "N/A"
+      ],
+      "alternative_tools": [
+        "Nagios XI",
+        "Prometheus"
+      ],
+      "cost_estimate": "$0 open source / support available",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "nagios-xi",
+      "name": "Nagios XI",
+      "vendor": "Nagios Enterprises",
+      "category": "Monitoring",
+      "description": "Commercial monitoring suite building on Nagios Core for infrastructure checks, alerting, and reporting workflows.",
+      "pricing": "paid",
+      "complexity_score": 5,
+      "key_features": [
+        "Host checks",
+        "Service checks",
+        "Alerting",
+        "Capacity reports"
+      ],
+      "use_cases": [
+        "Traditional infrastructure monitoring",
+        "Data centre NOC",
+        "Legacy environment oversight"
+      ],
+      "integration_capabilities": [
+        "SNMP",
+        "Plugins",
+        "Email/SMS alerts",
+        "Ticketing"
+      ],
+      "pros": [
+        "Extensive plugin library",
+        "Familiar to many ops teams"
+      ],
+      "cons": [
+        "Modern cloud-native visibility is limited",
+        "UI is dated"
+      ],
+      "certifications": [
+        "N/A"
+      ],
+      "alternative_tools": [
+        "Zabbix",
+        "Prometheus"
+      ],
+      "cost_estimate": "$2,495+/license",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "new-relic-infrastructure",
+      "name": "New Relic Infrastructure",
+      "vendor": "New Relic",
+      "category": "Monitoring",
+      "description": "Cloud-based infrastructure monitoring with host metrics, change tracking, inventory, and full-stack correlation.",
+      "pricing": "freemium",
+      "complexity_score": 4,
+      "key_features": [
+        "Host monitoring",
+        "Inventory",
+        "Alerting",
+        "Change tracking"
+      ],
+      "use_cases": [
+        "Hybrid cloud operations",
+        "Application-aware infrastructure monitoring",
+        "Managed observability"
+      ],
+      "integration_capabilities": [
+        "APM",
+        "Logs",
+        "Kubernetes",
+        "Cloud integrations"
+      ],
+      "pros": [
+        "Fast SaaS onboarding",
+        "Unified with APM and logs"
+      ],
+      "cons": [
+        "Usage costs can grow",
+        "Less customizable than fully self-hosted stacks"
+      ],
+      "certifications": [
+        "SOC 2",
+        "ISO 27001"
+      ],
+      "alternative_tools": [
+        "Datadog",
+        "Grafana Cloud"
+      ],
+      "cost_estimate": "$0 free tier / usage-based",
+      "deployment_complexity": "Low"
+    },
+    {
+      "id": "illumio-core",
+      "name": "Illumio Core",
+      "vendor": "Illumio",
+      "category": "Microsegmentation",
+      "description": "Agent-based microsegmentation platform for data centre and cloud workloads with application dependency visibility.",
+      "pricing": "enterprise",
+      "complexity_score": 8,
+      "key_features": [
+        "Application dependency map",
+        "Policy simulation",
+        "Microsegmentation",
+        "Label-based policy"
+      ],
+      "use_cases": [
+        "East-west control",
+        "Zero trust segmentation",
+        "Critical workload isolation"
+      ],
+      "integration_capabilities": [
+        "CMDB",
+        "SIEM",
+        "Cloud platforms",
+        "ServiceNow"
+      ],
+      "pros": [
+        "Excellent visibility before enforcement",
+        "Strong zero-trust segmentation"
+      ],
+      "cons": [
+        "Requires agent rollout",
+        "Premium pricing"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Akamai Guardicore Segmentation",
+        "VMware NSX Distributed Firewall"
+      ],
+      "cost_estimate": "$50,000+/year",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "vmware-nsx-dfw",
+      "name": "VMware NSX Distributed Firewall",
+      "vendor": "VMware",
+      "category": "Microsegmentation",
+      "description": "Hypervisor-based distributed firewall enabling east-west policy enforcement close to workloads in virtualized data centres.",
+      "pricing": "enterprise",
+      "complexity_score": 7,
+      "key_features": [
+        "Distributed firewalling",
+        "Security groups",
+        "Microsegmentation",
+        "Policy automation"
+      ],
+      "use_cases": [
+        "Private cloud segmentation",
+        "VMware estates",
+        "Lateral movement reduction"
+      ],
+      "integration_capabilities": [
+        "vCenter",
+        "Aria Automation",
+        "SIEM",
+        "NSX intelligence"
+      ],
+      "pros": [
+        "Strong VM-centric control",
+        "No in-guest agent for core firewalling"
+      ],
+      "cons": [
+        "Best in VMware-heavy estates",
+        "Licensing can be complex"
+      ],
+      "certifications": [
+        "Common Criteria"
+      ],
+      "alternative_tools": [
+        "Illumio Core",
+        "Juniper Apstra with security overlays"
+      ],
+      "cost_estimate": "$30,000+/cluster",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "akamai-guardicore-segmentation",
+      "name": "Akamai Guardicore Segmentation",
+      "vendor": "Akamai",
+      "category": "Microsegmentation",
+      "description": "Segmentation and breach containment platform focused on mapping flows, label-driven policy, and hybrid workload isolation.",
+      "pricing": "enterprise",
+      "complexity_score": 8,
+      "key_features": [
+        "Flow visibility",
+        "Label-based policy",
+        "Breach containment",
+        "Deception-aware tagging"
+      ],
+      "use_cases": [
+        "Hybrid data centres",
+        "Critical asset isolation",
+        "Ransomware blast-radius reduction"
+      ],
+      "integration_capabilities": [
+        "EDR",
+        "SIEM",
+        "CMDB",
+        "Cloud"
+      ],
+      "pros": [
+        "Good hybrid visibility",
+        "Strong ransomware containment positioning"
+      ],
+      "cons": [
+        "Agent deployment effort",
+        "Enterprise services often required"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "Illumio Core",
+        "VMware NSX Distributed Firewall"
+      ],
+      "cost_estimate": "$45,000+/year",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "suricata",
+      "name": "Suricata",
+      "vendor": "Open Information Security Foundation",
+      "category": "Threat Detection",
+      "description": "Open-source IDS/IPS and network security monitoring engine with signature, protocol, and file extraction capabilities.",
+      "pricing": "free",
+      "complexity_score": 6,
+      "key_features": [
+        "IDS/IPS",
+        "Protocol analysis",
+        "File extraction",
+        "Multi-threaded engine"
+      ],
+      "use_cases": [
+        "Network intrusion detection",
+        "Inline IPS",
+        "Traffic analysis"
+      ],
+      "integration_capabilities": [
+        "EVE JSON",
+        "Security Onion",
+        "SIEM",
+        "pfSense"
+      ],
+      "pros": [
+        "High-performance open source",
+        "Strong community rules"
+      ],
+      "cons": [
+        "Tuning and hardware sizing matter",
+        "Rule quality varies by feed"
+      ],
+      "certifications": [
+        "N/A"
+      ],
+      "alternative_tools": [
+        "Zeek",
+        "Snort"
+      ],
+      "cost_estimate": "$0 open source",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "zeek",
+      "name": "Zeek",
+      "vendor": "Zeek Project",
+      "category": "Threat Detection",
+      "description": "Powerful network analysis framework that produces rich metadata for hunting, anomaly detection, and retrospective investigation.",
+      "pricing": "free",
+      "complexity_score": 7,
+      "key_features": [
+        "Network metadata",
+        "Custom scripting",
+        "Protocol analyzers",
+        "File tracking"
+      ],
+      "use_cases": [
+        "Threat hunting",
+        "Network forensics",
+        "Research and high-signal telemetry"
+      ],
+      "integration_capabilities": [
+        "Kafka",
+        "Elastic",
+        "Security Onion",
+        "SIEM"
+      ],
+      "pros": [
+        "Deep protocol visibility",
+        "Excellent for analysts"
+      ],
+      "cons": [
+        "Steeper learning curve",
+        "Not an inline blocker by itself"
+      ],
+      "certifications": [
+        "N/A"
+      ],
+      "alternative_tools": [
+        "Suricata",
+        "Security Onion"
+      ],
+      "cost_estimate": "$0 open source",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "security-onion",
+      "name": "Security Onion",
+      "vendor": "Security Onion Solutions",
+      "category": "Threat Detection",
+      "description": "Linux distribution for SOC operations bundling network and host telemetry, detections, case workflow, and hunt tooling.",
+      "pricing": "free",
+      "complexity_score": 7,
+      "key_features": [
+        "NSM stack",
+        "Case management",
+        "Alerting",
+        "Host and network telemetry"
+      ],
+      "use_cases": [
+        "Greenfield SOC builds",
+        "Threat hunting labs",
+        "SMB security monitoring"
+      ],
+      "integration_capabilities": [
+        "Suricata",
+        "Zeek",
+        "Elastic",
+        "Wazuh"
+      ],
+      "pros": [
+        "Integrated open-source stack",
+        "Strong community resources"
+      ],
+      "cons": [
+        "Requires infrastructure planning",
+        "Operational upkeep for sensors and storage"
+      ],
+      "certifications": [
+        "N/A"
+      ],
+      "alternative_tools": [
+        "Wazuh",
+        "ELK Stack"
+      ],
+      "cost_estimate": "$0 open source / support available",
+      "deployment_complexity": "High"
+    },
+    {
+      "id": "crowdstrike-falcon",
+      "name": "CrowdStrike Falcon",
+      "vendor": "CrowdStrike",
+      "category": "EDR/XDR",
+      "description": "Cloud-delivered endpoint detection and response platform with managed intelligence, threat hunting, and broad module ecosystem.",
+      "pricing": "enterprise",
+      "complexity_score": 6,
+      "key_features": [
+        "Behavioral detections",
+        "Threat hunting",
+        "Managed intelligence",
+        "Endpoint isolation"
+      ],
+      "use_cases": [
+        "Enterprise endpoint protection",
+        "Incident response",
+        "Managed detection"
+      ],
+      "integration_capabilities": [
+        "SIEM",
+        "SOAR",
+        "Identity providers",
+        "Cloud telemetry"
+      ],
+      "pros": [
+        "Strong detection quality",
+        "Mature managed services ecosystem"
+      ],
+      "cons": [
+        "Higher subscription cost",
+        "Best value comes with multiple modules"
+      ],
+      "certifications": [
+        "SOC 2",
+        "FedRAMP"
+      ],
+      "alternative_tools": [
+        "SentinelOne Singularity",
+        "Microsoft Defender for Endpoint"
+      ],
+      "cost_estimate": "$59+/endpoint/year",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "sentinelone-singularity",
+      "name": "SentinelOne Singularity",
+      "vendor": "SentinelOne",
+      "category": "EDR/XDR",
+      "description": "Autonomous endpoint and XDR platform with behavioral AI detections, rollback, and broad telemetry collection.",
+      "pricing": "enterprise",
+      "complexity_score": 6,
+      "key_features": [
+        "Behavioral AI",
+        "Ransomware rollback",
+        "Storyline correlation",
+        "Threat hunting"
+      ],
+      "use_cases": [
+        "Ransomware defense",
+        "Endpoint response",
+        "Cross-domain investigations"
+      ],
+      "integration_capabilities": [
+        "SIEM",
+        "Identity providers",
+        "Cloud APIs",
+        "Ticketing tools"
+      ],
+      "pros": [
+        "Strong automation and rollback",
+        "Good analyst workflow"
+      ],
+      "cons": [
+        "Commercial pricing",
+        "Deep integrations take planning"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "CrowdStrike Falcon",
+        "Microsoft Defender for Endpoint"
+      ],
+      "cost_estimate": "$45+/endpoint/year",
+      "deployment_complexity": "Medium"
+    },
+    {
+      "id": "microsoft-defender-for-endpoint",
+      "name": "Microsoft Defender for Endpoint",
+      "vendor": "Microsoft",
+      "category": "EDR/XDR",
+      "description": "Endpoint protection and XDR service tightly integrated with Microsoft 365, identity, and cloud security signals.",
+      "pricing": "paid",
+      "complexity_score": 5,
+      "key_features": [
+        "EDR",
+        "Threat intelligence",
+        "Attack surface reduction",
+        "Automated investigation"
+      ],
+      "use_cases": [
+        "Microsoft-centric enterprises",
+        "Endpoint hardening",
+        "SOC consolidation"
+      ],
+      "integration_capabilities": [
+        "Intune",
+        "Defender XDR",
+        "Sentinel",
+        "Entra ID"
+      ],
+      "pros": [
+        "Strong native Microsoft integration",
+        "Good bundled value"
+      ],
+      "cons": [
+        "Best fit in Microsoft ecosystems",
+        "Cross-platform depth varies by plan"
+      ],
+      "certifications": [
+        "SOC 2",
+        "FedRAMP"
+      ],
+      "alternative_tools": [
+        "CrowdStrike Falcon",
+        "SentinelOne Singularity"
+      ],
+      "cost_estimate": "$5.20/user/month+",
+      "deployment_complexity": "Low"
+    },
+    {
+      "id": "palo-alto-cortex-xdr",
+      "name": "Palo Alto Cortex XDR",
+      "vendor": "Palo Alto Networks",
+      "category": "EDR/XDR",
+      "description": "XDR platform unifying endpoint, network, and cloud telemetry with analytics, threat hunting, and response automation.",
+      "pricing": "enterprise",
+      "complexity_score": 7,
+      "key_features": [
+        "XDR analytics",
+        "Endpoint detection",
+        "Threat hunting",
+        "Response automation"
+      ],
+      "use_cases": [
+        "SOC modernization",
+        "Cross-domain detections",
+        "Hybrid threat investigations"
+      ],
+      "integration_capabilities": [
+        "NGFW",
+        "SIEM",
+        "SOAR",
+        "Cloud telemetry"
+      ],
+      "pros": [
+        "Broad telemetry correlation",
+        "Strong alignment with Palo Alto stack"
+      ],
+      "cons": [
+        "Premium pricing",
+        "Most value in broader Palo Alto ecosystem"
+      ],
+      "certifications": [
+        "SOC 2"
+      ],
+      "alternative_tools": [
+        "CrowdStrike Falcon",
+        "Microsoft Defender for Endpoint"
+      ],
+      "cost_estimate": "$60+/endpoint/year",
+      "deployment_complexity": "Medium"
+    }
+  ]
+}

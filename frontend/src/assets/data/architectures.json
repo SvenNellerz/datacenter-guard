@@ -1,0 +1,116 @@
+{
+  "templates": [
+    {
+      "id": "small",
+      "name": "Small Deployment",
+      "size": "100-500 users",
+      "description": "Single-site design with compact DMZ, dual internet uplinks, centralized logging, and a modest privileged access boundary for smaller operations teams.",
+      "components": [
+        "Edge firewall pair",
+        "DMZ web tier",
+        "Internal application VLAN",
+        "Central log server",
+        "Backup appliance",
+        "PAM vault"
+      ]
+    },
+    {
+      "id": "medium",
+      "name": "Medium Deployment",
+      "size": "500-5000 users",
+      "description": "Multi-segment architecture with dedicated management network, separate backup zone, SIEM platform, and redundant application tiers.",
+      "components": [
+        "Core firewall cluster",
+        "Dedicated management network",
+        "SIEM platform",
+        "Jump host tier",
+        "Backup network",
+        "Virtualization cluster"
+      ]
+    },
+    {
+      "id": "large-enterprise",
+      "name": "Large Enterprise",
+      "size": "5000+ users",
+      "description": "Enterprise-scale reference with regional ingress points, layered DMZ, east-west segmentation, privileged session recording, and centralized governance.",
+      "components": [
+        "Regional edge services",
+        "Global load balancers",
+        "Tiered DMZ zones",
+        "Microsegmentation platform",
+        "Central PAM",
+        "Dedicated SOC tooling"
+      ]
+    },
+    {
+      "id": "air-gapped-ot",
+      "name": "Air-Gapped OT",
+      "size": "Isolated operational technology",
+      "description": "Highly restricted design using one-way transfer controls, bastion workflows, offline patch staging, and strict media handling between IT and OT.",
+      "components": [
+        "Data diode",
+        "OT jump enclave",
+        "Offline patch repository",
+        "Whitelisted engineering workstations",
+        "Removable media controls",
+        "Out-of-band monitoring"
+      ]
+    },
+    {
+      "id": "high-availability",
+      "name": "High Availability",
+      "size": "Mission critical services",
+      "description": "Redundant security and compute pattern using clustered firewalls, active-active load balancers, replicated storage, and HA monitoring paths.",
+      "components": [
+        "Firewall HA pair",
+        "Dual core switches",
+        "Active-active load balancers",
+        "Replicated storage",
+        "Cluster-aware PAM",
+        "Redundant SIEM collectors"
+      ]
+    },
+    {
+      "id": "disaster-recovery",
+      "name": "Disaster Recovery",
+      "size": "Primary + secondary site",
+      "description": "Resilient design with failover connectivity, replicated backups, warm standby security controls, and predefined recovery sequences.",
+      "components": [
+        "Primary site",
+        "Secondary site",
+        "Replication links",
+        "Immutable backup vault",
+        "DR jump hosts",
+        "Failover DNS and traffic management"
+      ]
+    },
+    {
+      "id": "multi-cloud",
+      "name": "Multi-Cloud",
+      "size": "AWS + Azure + GCP",
+      "description": "Cloud-spanning landing zone with shared identity, cloud-native controls, central SIEM, and standardized network security policies.",
+      "components": [
+        "Cloud transit hubs",
+        "Federated identity",
+        "Cloud-native WAF",
+        "Central SIEM",
+        "Secrets platform",
+        "Infrastructure-as-code pipelines"
+      ]
+    },
+    {
+      "id": "hybrid-cloud",
+      "name": "Hybrid Cloud",
+      "size": "On-prem + public cloud",
+      "description": "Hybrid reference joining on-prem data centre workloads with public cloud services through private connectivity, shared IAM, and consistent monitoring.",
+      "components": [
+        "Private connectivity",
+        "On-prem firewall edge",
+        "Cloud security groups",
+        "Unified identity platform",
+        "Shared monitoring",
+        "Hybrid backup strategy"
+      ]
+    }
+  ]
+}

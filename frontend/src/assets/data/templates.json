@@ -1,0 +1,60 @@
+{
+  "templates": [
+    {
+      "id": "terraform-aws-vpc",
+      "name": "AWS VPC with Security Groups",
+      "type": "Terraform",
+      "description": "Baseline AWS network with public/private subnets, route tables, and security groups for management and application access.",
+      "content": "terraform {\n  required_version = \">= 1.5.0\"\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 5.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = var.aws_region\n}\n\nresource \"aws_vpc\" \"main\" {\n  cidr_block           = var.vpc_cidr\n  enable_dns_support   = true\n  enable_dns_hostnames = true\n  tags = {\n    Name = \"datacenter-guard-vpc\"\n  }\n}\n\nresource \"aws_security_group\" \"management\" {\n  name        = \"management-access\"\n  description = \"Restricted admin access\"\n  vpc_id      = aws_vpc.main.id\n\n  ingress {\n    from_port   = 22\n    to_port     = 22\n    protocol    = \"tcp\"\n    cidr_blocks = [var.management_cidr]\n  }\n\n  egress {\n    from_port   = 0\n    to_port     = 0\n    protocol    = \"-1\"\n    cidr_blocks = [\"0.0.0.0/0\"]\n  }\n}"
+    },
+    {
+      "id": "terraform-azure-hub-spoke",
+      "name": "Azure Hub-and-Spoke Security Baseline",
+      "type": "Terraform",
+      "description": "Reference Azure virtual network topology with shared services in a hub and isolated spokes for workloads.",
+      "content": "terraform {\n  required_providers {\n    azurerm = {\n      source  = \"hashicorp/azurerm\"\n      version = \"~> 3.0\"\n    }\n  }\n}\n\nprovider \"azurerm\" {\n  features {}\n}\n\nresource \"azurerm_resource_group\" \"rg\" {\n  name     = \"rg-datacenter-guard\"\n  location = var.location\n}\n\nresource \"azurerm_virtual_network\" \"hub\" {\n  name                = \"vnet-hub\"\n  location            = azurerm_resource_group.rg.location\n  resource_group_name = azurerm_resource_group.rg.name\n  address_space       = [\"10.10.0.0/16\"]\n}"
+    },
+    {
+      "id": "terraform-gcp-shared-vpc",
+      "name": "GCP Shared VPC Security Foundation",
+      "type": "Terraform",
+      "description": "Starter template for a shared VPC with firewall rules and centralized subnet management in Google Cloud.",
+      "content": "terraform {\n  required_providers {\n    google = {\n      source  = \"hashicorp/google\"\n      version = \"~> 5.0\"\n    }\n  }\n}\n\nprovider \"google\" {\n  project = var.project_id\n  region  = var.region\n}\n\nresource \"google_compute_network\" \"shared\" {\n  name                    = \"datacenter-guard-shared-vpc\"\n  auto_create_subnetworks = false\n}"
+    },
+    {
+      "id": "ansible-linux-hardening",
+      "name": "Linux Server Hardening",
+      "type": "Ansible",
+      "description": "Baseline Linux hardening playbook covering packages, SSH restrictions, and audit settings.",
+      "content": "---\n- name: Linux hardening baseline\n  hosts: all\n  become: yes\n  tasks:\n    - name: Ensure latest security packages are installed\n      package:\n        name: '*'\n        state: latest\n\n    - name: Disable root SSH login\n      lineinfile:\n        path: /etc/ssh/sshd_config\n        regexp: '^PermitRootLogin'\n        line: 'PermitRootLogin no'\n\n    - name: Restart sshd\n      service:\n        name: sshd\n        state: restarted"
+    },
+    {
+      "id": "ansible-patching-window",
+      "name": "Patch Window Automation",
+      "type": "Ansible",
+      "description": "Playbook for routine package patching with pre/post checks and service restart controls.",
+      "content": "---\n- name: Controlled patch window\n  hosts: all\n  serial: 10\n  become: yes\n  tasks:\n    - name: Gather package facts\n      package_facts:\n\n    - name: Apply security updates\n      package:\n        name: '*'\n        state: latest\n\n    - name: Reboot if required\n      reboot:\n        reboot_timeout: 1800"
+    },
+    {
+      "id": "firewall-dmz-policy",
+      "name": "DMZ Firewall Rule Set",
+      "type": "Firewall",
+      "description": "Example iptables policy for a web-facing DMZ that only permits required inbound and outbound connections.",
+      "content": "*filter\n:INPUT DROP [0:0]\n:FORWARD DROP [0:0]\n:OUTPUT ACCEPT [0:0]\n-A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT\n-A INPUT -p tcp -s 10.20.0.0/24 --dport 22 -j ACCEPT\n-A INPUT -p tcp --dport 80 -j ACCEPT\n-A INPUT -p tcp --dport 443 -j ACCEPT\nCOMMIT"
+    },
+    {
+      "id": "firewall-management-segment",
+      "name": "Management Network ACL Example",
+      "type": "Firewall",
+      "description": "Example management network policy that restricts administrative access to approved jump hosts and monitoring systems.",
+      "content": "# Management segment allow-list\npermit tcp 10.50.0.10/32 10.60.0.0/24 eq 22\npermit tcp 10.50.0.11/32 10.60.0.0/24 eq 3389\npermit udp 10.50.0.20/32 10.60.0.0/24 eq 161\ndeny ip any 10.60.0.0/24 log"
+    },
+    {
+      "id": "terraform-dr-backup-vault",
+      "name": "Immutable Backup Vault",
+      "type": "Terraform",
+      "description": "Terraform snippet for cloud backup vault controls with retention and immutability-oriented lifecycle settings.",
+      "content": "resource \"aws_backup_vault\" \"immutable\" {\n  name = \"datacenter-guard-vault\"\n}\n\nresource \"aws_backup_vault_lock_configuration\" \"lock\" {\n  backup_vault_name   = aws_backup_vault.immutable.name\n  min_retention_days  = 30\n  max_retention_days  = 3650\n  changeable_for_days = 7\n}"
+    }
+  ]
+}

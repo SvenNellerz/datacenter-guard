@@ -1,0 +1,424 @@
+{
+  "frameworks": [
+    {
+      "id": "nist-csf",
+      "name": "NIST CSF 2.0",
+      "description": "Cybersecurity Framework 2.0 organized around governance and lifecycle functions for managing enterprise cyber risk.",
+      "categories": [
+        {
+          "name": "Identify",
+          "items": [
+            "Maintain a current inventory of hardware, software, data, and third-party dependencies.",
+            "Document business context, mission-critical services, and risk tolerance for the data centre.",
+            "Map data flows between DMZ, management, production, backup, and external connectivity zones.",
+            "Classify assets by sensitivity, regulatory scope, and operational criticality.",
+            "Assess supply chain exposure for hosted platforms, MSPs, and security tooling."
+          ]
+        },
+        {
+          "name": "Protect",
+          "items": [
+            "Enforce role-based access control and MFA for all administrative interfaces.",
+            "Implement network segmentation, DMZ controls, and least-privilege firewall policies.",
+            "Apply secure configuration baselines for servers, virtualization, and network devices.",
+            "Protect backups, secrets, and cryptographic material with rotation and recovery procedures.",
+            "Deliver user, operator, and engineering awareness training aligned to privileged workflows."
+          ]
+        },
+        {
+          "name": "Detect",
+          "items": [
+            "Centralize security logs from firewalls, PAM, operating systems, and cloud services.",
+            "Define detection content for brute force, privilege escalation, suspicious east-west traffic, and data exfiltration.",
+            "Continuously monitor vulnerabilities, configuration drift, and malware indicators.",
+            "Tune alert thresholds and establish triage workflows with documented ownership.",
+            "Validate detections with purple-team exercises and incident simulations."
+          ]
+        },
+        {
+          "name": "Respond",
+          "items": [
+            "Maintain incident playbooks for ransomware, insider threat, DDoS, and credential misuse.",
+            "Define communications paths for executives, legal, IT operations, and external responders.",
+            "Contain compromised accounts, endpoints, and network segments using approved procedures.",
+            "Capture evidence, preserve logs, and document timelines for post-incident analysis.",
+            "Coordinate eradication tasks, access resets, and stakeholder updates during active response."
+          ]
+        },
+        {
+          "name": "Recover",
+          "items": [
+            "Restore services from tested backups with integrity validation and rollback plans.",
+            "Track lessons learned and update architecture, detections, and runbooks after incidents.",
+            "Rebuild trust boundaries, credentials, and secrets affected during compromise.",
+            "Measure recovery against RTO and RPO targets for critical services.",
+            "Communicate recovery status and residual risk to business owners and auditors."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cis-controls-v8",
+      "name": "CIS Controls v8",
+      "description": "Prioritized safeguards for foundational cyber hygiene and continuous risk reduction.",
+      "categories": [
+        {
+          "name": "1. Inventory and Control of Enterprise Assets",
+          "items": [
+            "Maintain an authorized asset inventory.",
+            "Detect unmanaged or rogue devices on network segments."
+          ]
+        },
+        {
+          "name": "2. Inventory and Control of Software Assets",
+          "items": [
+            "Track approved software and versions.",
+            "Block or remediate unauthorized software promptly."
+          ]
+        },
+        {
+          "name": "3. Data Protection",
+          "items": [
+            "Classify sensitive data and retention needs.",
+            "Apply encryption, backup, and exfiltration controls."
+          ]
+        },
+        {
+          "name": "4. Secure Configuration of Enterprise Assets and Software",
+          "items": [
+            "Apply hardened baselines to servers and endpoints.",
+            "Continuously monitor for configuration drift."
+          ]
+        },
+        {
+          "name": "5. Account Management",
+          "items": [
+            "Review account lifecycle events.",
+            "Disable stale, shared, or orphaned accounts."
+          ]
+        },
+        {
+          "name": "6. Access Control Management",
+          "items": [
+            "Enforce least privilege and role reviews.",
+            "Require MFA for remote and privileged access."
+          ]
+        },
+        {
+          "name": "7. Continuous Vulnerability Management",
+          "items": [
+            "Scan systems routinely for vulnerabilities.",
+            "Prioritize remediation based on exploitability and criticality."
+          ]
+        },
+        {
+          "name": "8. Audit Log Management",
+          "items": [
+            "Centralize and protect security logs.",
+            "Establish retention and review procedures."
+          ]
+        },
+        {
+          "name": "9. Email and Web Browser Protections",
+          "items": [
+            "Harden browser and email security settings.",
+            "Block malicious content and unsafe attachments."
+          ]
+        },
+        {
+          "name": "10. Malware Defenses",
+          "items": [
+            "Deploy prevention and detection controls.",
+            "Validate response actions for malicious activity."
+          ]
+        },
+        {
+          "name": "11. Data Recovery",
+          "items": [
+            "Maintain offline and immutable backups.",
+            "Test restore procedures at defined intervals."
+          ]
+        },
+        {
+          "name": "12. Network Infrastructure Management",
+          "items": [
+            "Secure routers, switches, and firewalls.",
+            "Document changes and monitor network device health."
+          ]
+        },
+        {
+          "name": "13. Network Monitoring and Defense",
+          "items": [
+            "Inspect traffic for malicious patterns.",
+            "Segment high-value systems and monitor lateral movement."
+          ]
+        },
+        {
+          "name": "14. Security Awareness and Skills Training",
+          "items": [
+            "Train staff on phishing, access handling, and reporting.",
+            "Develop technical training for administrators and responders."
+          ]
+        },
+        {
+          "name": "15. Service Provider Management",
+          "items": [
+            "Assess third-party security obligations.",
+            "Monitor provider access and performance against contracts."
+          ]
+        },
+        {
+          "name": "16. Application Software Security",
+          "items": [
+            "Integrate security testing into delivery workflows.",
+            "Protect secrets and dependencies in build pipelines."
+          ]
+        },
+        {
+          "name": "17. Incident Response Management",
+          "items": [
+            "Maintain and exercise response plans.",
+            "Capture lessons learned and update procedures."
+          ]
+        },
+        {
+          "name": "18. Penetration Testing",
+          "items": [
+            "Perform regular internal and external assessments.",
+            "Track remediation for discovered weaknesses."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iso-27001-2022",
+      "name": "ISO 27001:2022",
+      "description": "Information security management system standard with Annex A control themes spanning organizational, people, physical, and technological measures.",
+      "categories": [
+        {
+          "name": "A.5 Organizational Controls",
+          "items": [
+            "Define security policies and ownership.",
+            "Manage supplier, project, and asset governance controls."
+          ]
+        },
+        {
+          "name": "A.6 People Controls",
+          "items": [
+            "Screen personnel and define responsibilities.",
+            "Train staff and manage disciplinary and termination processes."
+          ]
+        },
+        {
+          "name": "A.7 Physical Controls",
+          "items": [
+            "Restrict physical entry to data halls.",
+            "Protect equipment against theft, tampering, and environmental threats."
+          ]
+        },
+        {
+          "name": "A.8 Technological Controls",
+          "items": [
+            "Implement endpoint, network, and application safeguards.",
+            "Protect logs, identities, data, and backups."
+          ]
+        },
+        {
+          "name": "Asset Management",
+          "items": [
+            "Assign ownership for information assets.",
+            "Handle asset return, disposal, and labeling."
+          ]
+        },
+        {
+          "name": "Access Control",
+          "items": [
+            "Control user registration and privilege grants.",
+            "Review privileged access and authentication practices."
+          ]
+        },
+        {
+          "name": "Cryptography",
+          "items": [
+            "Define encryption policies and key management.",
+            "Protect data in transit and at rest."
+          ]
+        },
+        {
+          "name": "Operations Security",
+          "items": [
+            "Manage changes, malware protection, and backups.",
+            "Separate environments and monitor capacity."
+          ]
+        },
+        {
+          "name": "Communications Security",
+          "items": [
+            "Secure network services and information transfer.",
+            "Segment networks based on trust and sensitivity."
+          ]
+        },
+        {
+          "name": "System Acquisition and Development",
+          "items": [
+            "Include security requirements in projects.",
+            "Manage vulnerabilities in development and release processes."
+          ]
+        },
+        {
+          "name": "Supplier Relationships",
+          "items": [
+            "Contract for security requirements with suppliers.",
+            "Monitor service delivery and third-party changes."
+          ]
+        },
+        {
+          "name": "Incident Management",
+          "items": [
+            "Report, classify, and respond to events.",
+            "Collect evidence and learn from incidents."
+          ]
+        },
+        {
+          "name": "Business Continuity",
+          "items": [
+            "Embed information security into continuity planning.",
+            "Test recovery and crisis communication arrangements."
+          ]
+        },
+        {
+          "name": "Compliance",
+          "items": [
+            "Meet legal, regulatory, and audit obligations.",
+            "Protect records and privacy-related information."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hipaa-security-rule",
+      "name": "HIPAA Security Rule",
+      "description": "Safeguards for protecting electronic protected health information through administrative, physical, and technical controls.",
+      "categories": [
+        {
+          "name": "Administrative Safeguards",
+          "items": [
+            "Perform periodic risk analysis for systems storing or processing ePHI.",
+            "Assign a security officer and define workforce security responsibilities.",
+            "Authorize, supervise, and review workforce access to ePHI systems.",
+            "Establish contingency plans, backup procedures, and emergency-mode operations."
+          ]
+        },
+        {
+          "name": "Physical Safeguards",
+          "items": [
+            "Control facility access to server rooms and records areas.",
+            "Protect workstations and restrict unauthorized device use.",
+            "Track device and media movement, disposal, reuse, and accountability.",
+            "Implement environmental and physical protections for critical infrastructure."
+          ]
+        },
+        {
+          "name": "Technical Safeguards",
+          "items": [
+            "Assign unique user IDs and emergency access procedures.",
+            "Implement audit controls for systems handling ePHI.",
+            "Protect integrity of ePHI against improper alteration or destruction.",
+            "Secure data in transit with encryption and trusted channel controls."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pci-dss-v4",
+      "name": "PCI-DSS v4.0",
+      "description": "Payment Card Industry Data Security Standard requirements for protecting cardholder data environments.",
+      "categories": [
+        {
+          "name": "1. Install and Maintain Network Security Controls",
+          "items": [
+            "Document firewall and router standards.",
+            "Restrict inbound and outbound traffic to required flows only."
+          ]
+        },
+        {
+          "name": "2. Apply Secure Configurations to All System Components",
+          "items": [
+            "Remove vendor defaults and unnecessary services.",
+            "Harden systems before they enter production."
+          ]
+        },
+        {
+          "name": "3. Protect Stored Account Data",
+          "items": [
+            "Minimize stored account data.",
+            "Render PAN unreadable with strong cryptography and key controls."
+          ]
+        },
+        {
+          "name": "4. Protect Cardholder Data with Strong Cryptography During Transmission",
+          "items": [
+            "Encrypt transmission over open or public networks.",
+            "Validate certificate and protocol posture."
+          ]
+        },
+        {
+          "name": "5. Protect All Systems and Networks from Malicious Software",
+          "items": [
+            "Deploy anti-malware where appropriate.",
+            "Detect, alert, and respond to malware events."
+          ]
+        },
+        {
+          "name": "6. Develop and Maintain Secure Systems and Software",
+          "items": [
+            "Track vulnerabilities and patch in defined windows.",
+            "Use secure development and change control practices."
+          ]
+        },
+        {
+          "name": "7. Restrict Access to System Components and Cardholder Data by Business Need to Know",
+          "items": [
+            "Define roles and least-privilege access.",
+            "Review access assignments regularly."
+          ]
+        },
+        {
+          "name": "8. Identify Users and Authenticate Access to System Components",
+          "items": [
+            "Use unique IDs and strong authentication.",
+            "Protect service, application, and privileged accounts."
+          ]
+        },
+        {
+          "name": "9. Restrict Physical Access to Cardholder Data",
+          "items": [
+            "Secure facilities, racks, and media.",
+            "Log and review visitor and physical access events."
+          ]
+        },
+        {
+          "name": "10. Log and Monitor All Access to System Components and Cardholder Data",
+          "items": [
+            "Collect, protect, and review audit logs.",
+            "Synchronize time and alert on suspicious events."
+          ]
+        },
+        {
+          "name": "11. Test Security of Systems and Networks Regularly",
+          "items": [
+            "Run vulnerability scans and penetration tests.",
+            "Validate IDS/IPS, file integrity, and segmentation controls."
+          ]
+        },
+        {
+          "name": "12. Support Information Security with Organizational Policies and Programs",
+          "items": [
+            "Maintain governance, awareness, and incident response processes.",
+            "Review security policy, risk, and third-party obligations regularly."
+          ]
+        }
+      ]
+    }
+  ]
+}
